@@ -26,10 +26,12 @@ public class CategoryListAdapter extends RecyclerCommonAdapter<ChannelListResult
         String str = item.getSubscribe_count() + " 订阅 | " +
                 "总帖数 <font color='#FF678D'>" + item.getTotal_updates() + "</font>";
 //        链式调用
-        holder.setText(R.id.channel_text, item.getName())
+        holder
+                .setText(R.id.channel_text, item.getName())
                 .setText(R.id.channel_topic, item.getIntro())
                 .setText(R.id.channel_update_info, Html.fromHtml(str));
-        holder.setImagePath(R.id.channel_icon,new ImageLoader(item.getIcon_url()));
+        holder
+                .setImagePath(R.id.channel_icon,new ImageLoader(item.getIcon_url()));
     }
 
 }

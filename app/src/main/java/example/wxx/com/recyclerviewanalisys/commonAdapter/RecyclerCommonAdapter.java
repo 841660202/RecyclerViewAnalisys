@@ -32,15 +32,16 @@ public abstract class RecyclerCommonAdapter<DATA> extends RecyclerView.Adapter<V
         this.mLayoutId = layoutId;
         mDatas = datas;
     }
-    public RecyclerCommonAdapter(Context context, List<DATA> datas,MultiTypeSupport typeSupport) {
-        this(context,-1,datas);
+
+    public RecyclerCommonAdapter(Context context, List<DATA> datas, MultiTypeSupport typeSupport) {
+        this(context, -1, datas);
         this.mMultiTypeSupport = typeSupport;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 //      多布局问题
-        if(mMultiTypeSupport!=null){
+        if (mMultiTypeSupport != null) {
 //            需要多布局
             mLayoutId = viewType;
         }
@@ -52,8 +53,8 @@ public abstract class RecyclerCommonAdapter<DATA> extends RecyclerView.Adapter<V
 
     @Override
     public int getItemViewType(int position) {
-        if(mMultiTypeSupport!=null)
-           return mMultiTypeSupport.getLayoutId(mDatas.get(position));
+        if (mMultiTypeSupport != null)
+            return mMultiTypeSupport.getLayoutId(mDatas.get(position));
         return super.getItemViewType(position);
     }
 

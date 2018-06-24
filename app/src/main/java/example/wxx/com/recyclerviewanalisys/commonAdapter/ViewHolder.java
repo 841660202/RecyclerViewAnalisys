@@ -90,13 +90,14 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     /**
      * 使用自定义的一套规范 HolderImageLoader 加载图片
      * 有利于解耦图片加载，比如不固定于第三方的Glide等等
+     *
      * @param viewId
      * @param imageLoader
      * @return
      */
     public ViewHolder setImagePath(int viewId, HolderImageLoader imageLoader) {
         ImageView imageView = getView(viewId);
-        imageLoader.loadImage(imageView,imageLoader.getPath());
+        imageLoader.loadImage(imageView, imageLoader.getPath());
 //        Glide.with(context).load(path).placeholder()
         return this;
     }
