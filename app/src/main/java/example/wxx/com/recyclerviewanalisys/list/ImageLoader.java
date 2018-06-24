@@ -5,7 +5,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 
 import example.wxx.com.recyclerviewanalisys.R;
-import example.wxx.com.recyclerviewanalisys.commonAdapter.ViewHolder;
+import example.wxx.com.recyclerviewanalisys.commonAdapter.common.ViewHolder;
 
 /**
  * 作者：wengxingxia

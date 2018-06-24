@@ -1,4 +1,4 @@
-package example.wxx.com.recyclerviewanalisys.commonAdapter;
+package example.wxx.com.recyclerviewanalisys.commonAdapter.chat;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,10 +13,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import example.wxx.com.recyclerviewanalisys.R;
-import example.wxx.com.recyclerviewanalisys.commonAdapter.chat.ChatAdapter;
-import example.wxx.com.recyclerviewanalisys.commonAdapter.chat.ChatData;
+import example.wxx.com.recyclerviewanalisys.commonAdapter.common.ItemClickListener;
 
-public class CommonAdapterActivity extends AppCompatActivity {
+public class ChatActivity extends AppCompatActivity {
 
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
@@ -37,7 +36,7 @@ public class CommonAdapterActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position) {
                 Log.i("click", String.valueOf(position));
-                Toast.makeText(CommonAdapterActivity.this, "click:" + String.valueOf(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ChatActivity.this, "click:" + String.valueOf(position), Toast.LENGTH_SHORT).show();
             }
         });
         mRecyclerView.setAdapter(chatAdapter);

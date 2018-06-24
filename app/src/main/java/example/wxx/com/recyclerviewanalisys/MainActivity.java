@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import example.wxx.com.recyclerviewanalisys.baseuse.BaseUseActivity;
-import example.wxx.com.recyclerviewanalisys.commonAdapter.CommonAdapterActivity;
+import example.wxx.com.recyclerviewanalisys.commonAdapter.chat.ChatActivity;
 import example.wxx.com.recyclerviewanalisys.list.NHDZListActivity;
 import example.wxx.com.recyclerviewanalisys.wrap.HeaderFooterListActivity;
 
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void commonAdapter(View view) {
-        Intent intent = new Intent(this, CommonAdapterActivity.class);
+        Intent intent = new Intent(this, ChatActivity.class);
         startActivity(intent);
     }
 

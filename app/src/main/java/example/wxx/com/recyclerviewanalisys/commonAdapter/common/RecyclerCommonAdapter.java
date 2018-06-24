@@ -1,4 +1,4 @@
-package example.wxx.com.recyclerviewanalisys.commonAdapter;
+package example.wxx.com.recyclerviewanalisys.commonAdapter.common;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
+
+import example.wxx.com.recyclerviewanalisys.commonAdapter.common.ItemClickListener;
+import example.wxx.com.recyclerviewanalisys.commonAdapter.common.ItemLongClickListener;
+import example.wxx.com.recyclerviewanalisys.commonAdapter.common.MultiTypeSupport;
 
 /**
  * RecyclerView的通用Adapter

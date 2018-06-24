@@ -25,7 +25,7 @@ public class WrapRecyclerView extends RecyclerView {
 
         @Override
         public void onItemRangeChanged(int positionStart, int itemCount, Object payload) {
-            mAdapter.notifyItemRangeChanged(positionStart,itemCount,payload);
+            mAdapter.notifyItemRangeChanged(positionStart, itemCount, payload);
         }
 
         @Override
@@ -35,26 +35,26 @@ public class WrapRecyclerView extends RecyclerView {
 
         @Override
         public void onItemRangeInserted(int positionStart, int itemCount) {
-            mAdapter.notifyItemRangeInserted(positionStart,itemCount);
+            mAdapter.notifyItemRangeInserted(positionStart, itemCount);
         }
 
         @Override
         public void onItemRangeRemoved(int positionStart, int itemCount) {
-            mAdapter.notifyItemRangeRemoved(positionStart,itemCount);
+            mAdapter.notifyItemRangeRemoved(positionStart, itemCount);
         }
 
         @Override
         public void onItemRangeMoved(int fromPosition, int toPosition, int itemCount) {
-            mAdapter.notifyItemMoved(fromPosition,toPosition);
+            mAdapter.notifyItemMoved(fromPosition, toPosition);
         }
     };
 
     public WrapRecyclerView(Context context) {
-        this(context,null);
+        this(context, null);
     }
 
     public WrapRecyclerView(Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs,0);
+        this(context, attrs, 0);
     }
 
     public WrapRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
@@ -63,9 +63,9 @@ public class WrapRecyclerView extends RecyclerView {
 
     @Override
     public void setAdapter(Adapter adapter) {
-        if(adapter instanceof  WrapRecyclerAdapter){
+        if (adapter instanceof WrapRecyclerAdapter) {
             mAdapter = (WrapRecyclerAdapter) adapter;
-        }else{
+        } else {
             mAdapter = new WrapRecyclerAdapter(adapter);
             adapter.registerAdapterDataObserver(mAdapterDataObserver);
 
@@ -79,7 +79,7 @@ public class WrapRecyclerView extends RecyclerView {
      * 添加头部
      */
     public void addHeaderView(View view) {
-        if(mAdapter!=null)
+        if (mAdapter != null)
             mAdapter.addHeaderView(view);
     }
 
@@ -87,7 +87,7 @@ public class WrapRecyclerView extends RecyclerView {
      * 添加底部
      */
     public void addFooterView(View view) {
-        if(mAdapter!=null)
+        if (mAdapter != null)
             mAdapter.addFooterView(view);
     }
 
@@ -95,7 +95,7 @@ public class WrapRecyclerView extends RecyclerView {
      * 移除头部
      */
     public void removeHeaderView(View view) {
-        if(mAdapter!=null)
+        if (mAdapter != null)
             mAdapter.removeHeaderView(view);
     }
 
@@ -103,7 +103,7 @@ public class WrapRecyclerView extends RecyclerView {
      * 移除底部
      */
     public void removeFooterView(View view) {
-        if(mAdapter!=null)
+        if (mAdapter != null)
             mAdapter.removeFooterView(view);
     }
 

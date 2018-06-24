@@ -1,4 +1,4 @@
-package example.wxx.com.recyclerviewanalisys.commonAdapter;
+package example.wxx.com.recyclerviewanalisys.commonAdapter.common;
 
 /**
  * 多布局支持

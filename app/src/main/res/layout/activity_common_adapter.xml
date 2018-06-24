@@ -5,6 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="example.wxx.com.recyclerviewanalisys.commonAdapter.CommonAdapterActivity">
+    tools:context="example.wxx.com.recyclerviewanalisys.commonAdapter.chat.ChatActivity">
 
 </android.support.constraint.ConstraintLayout>

@@ -5,17 +5,15 @@ import android.content.Context;
 import java.util.List;
 
 import example.wxx.com.recyclerviewanalisys.R;
-import example.wxx.com.recyclerviewanalisys.commonAdapter.MultiTypeSupport;
-import example.wxx.com.recyclerviewanalisys.commonAdapter.RecyclerCommonAdapter;
-import example.wxx.com.recyclerviewanalisys.commonAdapter.ViewHolder;
-import example.wxx.com.recyclerviewanalisys.commonAdapter.chat.ChatData;
+import example.wxx.com.recyclerviewanalisys.commonAdapter.common.MultiTypeSupport;
+import example.wxx.com.recyclerviewanalisys.commonAdapter.common.ViewHolder;
 
 /**
  * Created by Darren on 2016/12/28.
  * Email: 240336124@qq.com
  * Description: 利用万能通用的Adapter改造后的列表
  */
-public class ChatAdapter extends RecyclerCommonAdapter<ChatData> {
+public class ChatAdapter extends ViewHolder.RecyclerCommonAdapter<ChatData> {
 
     public ChatAdapter(Context context, List<ChatData> chatDatas) {
         super(context, chatDatas, new MultiTypeSupport<ChatData>() {

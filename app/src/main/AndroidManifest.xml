@@ -22,7 +22,7 @@
         </activity>
         <activity android:name=".list.NHDZListActivity">
         </activity>
-        <activity android:name=".commonAdapter.CommonAdapterActivity">
+        <activity android:name=".commonAdapter.chat.ChatActivity">
         </activity>
         <activity android:name=".wrap.HeaderFooterListActivity">
 

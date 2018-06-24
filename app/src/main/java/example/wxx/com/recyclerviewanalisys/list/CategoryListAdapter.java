@@ -6,15 +6,14 @@ import android.text.Html;
 import java.util.List;
 
 import example.wxx.com.recyclerviewanalisys.R;
-import example.wxx.com.recyclerviewanalisys.commonAdapter.RecyclerCommonAdapter;
-import example.wxx.com.recyclerviewanalisys.commonAdapter.ViewHolder;
+import example.wxx.com.recyclerviewanalisys.commonAdapter.common.ViewHolder;
 
 /**
  * Created by Darren on 2016/12/28.
  * Email: 240336124@qq.com
  * Description: 利用万能通用的Adapter改造后的列表
  */
-public class CategoryListAdapter extends RecyclerCommonAdapter<ChannelListResult.DataBean.CategoriesBean.CategoryListBean> {
+public class CategoryListAdapter extends ViewHolder.RecyclerCommonAdapter<ChannelListResult.DataBean.CategoriesBean.CategoryListBean> {
 
     public CategoryListAdapter(Context context, List<ChannelListResult.DataBean.CategoriesBean.CategoryListBean> categoryListBeen) {
         super(context, R.layout.channel_list_item, categoryListBeen);

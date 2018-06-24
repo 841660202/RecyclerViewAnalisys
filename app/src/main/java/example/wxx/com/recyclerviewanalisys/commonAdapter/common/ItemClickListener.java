@@ -1,4 +1,4 @@
-package example.wxx.com.recyclerviewanalisys.commonAdapter;
+package example.wxx.com.recyclerviewanalisys.commonAdapter.common;
 
 /**
  * 作者：wengxingxia
