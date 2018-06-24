@@ -7,11 +7,18 @@
     android:orientation="vertical"
     tools:context="example.wxx.com.recyclerviewanalisys.baseuse.BaseUseActivity">
 
-    <example.wxx.com.recyclerviewanalisys.wrap.WrapRecyclerView
+    <!--<example.wxx.com.recyclerviewanalisys.wrap.WrapRecyclerView-->
+        <!--android:id="@+id/recyclerView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="10dp">-->
+
+    <!--</example.wxx.com.recyclerviewanalisys.wrap.WrapRecyclerView>-->
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
 
-    </example.wxx.com.recyclerviewanalisys.wrap.WrapRecyclerView>
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>

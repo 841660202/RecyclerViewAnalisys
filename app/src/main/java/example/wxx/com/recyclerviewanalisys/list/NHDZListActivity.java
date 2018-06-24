@@ -45,7 +45,7 @@ public class NHDZListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base_use);
+        setContentView(R.layout.activity_chat);
         ButterKnife.bind(this);
         mGridLayoutItemDecoration = new GridLayoutItemDecoration(this, R.drawable.item_deliver_01);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));

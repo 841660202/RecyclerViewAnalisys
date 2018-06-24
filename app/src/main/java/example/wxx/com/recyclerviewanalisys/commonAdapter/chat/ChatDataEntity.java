@@ -1,10 +1,10 @@
 package example.wxx.com.recyclerviewanalisys.commonAdapter.chat;
 
-public class ChatData {
+public class ChatDataEntity {
     public String chatContent;
     public int isMe;
 
-    public ChatData(String chatContent, int isMe) {
+    public ChatDataEntity(String chatContent, int isMe) {
         this.chatContent = chatContent;
         this.isMe = isMe;
     }

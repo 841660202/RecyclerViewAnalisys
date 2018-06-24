@@ -6,19 +6,16 @@ import java.util.List;
 
 import example.wxx.com.recyclerviewanalisys.R;
 import example.wxx.com.recyclerviewanalisys.commonAdapter.common.MultiTypeSupport;
+import example.wxx.com.recyclerviewanalisys.commonAdapter.common.RecyclerCommonAdapter;
 import example.wxx.com.recyclerviewanalisys.commonAdapter.common.ViewHolder;
 
-/**
- * Created by Darren on 2016/12/28.
- * Email: 240336124@qq.com
- * Description: 利用万能通用的Adapter改造后的列表
- */
-public class ChatAdapter extends ViewHolder.RecyclerCommonAdapter<ChatData> {
+public class ChatAdapter extends RecyclerCommonAdapter<ChatDataEntity> {
 
-    public ChatAdapter(Context context, List<ChatData> chatDatas) {
-        super(context, chatDatas, new MultiTypeSupport<ChatData>() {
+    public ChatAdapter(Context context, List<ChatDataEntity> chatDatas) {
+        super(context, chatDatas, new MultiTypeSupport<ChatDataEntity>() {
+            // 使用哪种布局
             @Override
-            public int getLayoutId(ChatData item) {
+            public int getLayoutId(ChatDataEntity item) {
                 if (item.isMe == 1) {
                     return R.layout.item_chat_me;
                 }
@@ -28,7 +25,9 @@ public class ChatAdapter extends ViewHolder.RecyclerCommonAdapter<ChatData> {
     }
 
     @Override
-    protected void convert(ViewHolder holder, ChatData chatData, int position) {
-        holder.setText(R.id.tvText, chatData.getChatContent());
+    protected void convert(ViewHolder holder, ChatDataEntity chatData, int position) {
+        holder
+                .setText(R.id.tvText, chatData.getChatContent())
+                .setText(R.id.tpText, Integer.toString(chatData.getIsMe()));
     }
 }

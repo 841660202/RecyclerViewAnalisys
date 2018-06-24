@@ -20,12 +20,12 @@ public class ChatActivity extends AppCompatActivity {
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
 
-    private List<ChatData> mChatDatas;
+    private List<ChatDataEntity> mChatDatas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base_use);
+        setContentView(R.layout.activity_chat);
         ButterKnife.bind(this);
 
         initData();
@@ -43,13 +43,14 @@ public class ChatActivity extends AppCompatActivity {
 
     }
 
+    // 生成模拟数据
     private void initData() {
         mChatDatas = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             if (i % 3 == 0) {
-                mChatDatas.add(new ChatData("自己内容" + i, 1));
+                mChatDatas.add(new ChatDataEntity("自己内容" + i, 1));
             } else
-                mChatDatas.add(new ChatData("朋友内容" + i, 0));
+                mChatDatas.add(new ChatDataEntity("朋友内容" + i, 0));
         }
     }
 }
